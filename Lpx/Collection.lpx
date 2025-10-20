@@ -1,0 +1,74 @@
+#!name = 自用整合
+#!desc = 自用脚本整合
+#!author = Luke2084
+#!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PostBox_1.png
+#!date = 2025-4-29
+[Rule]
+
+[Rewrite]
+
+
+
+[Script]
+#************************************#
+# 哔哩哔哩画质解锁
+# hostname = app.bilibili.com
+http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\? script-path=https://kelee.one/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=true, timeout=10, tag=画质解锁, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili.png
+
+
+#************************************#
+# 搜图神器
+# hostname = wallpaper.soutushenqi.com
+http-response ^http:\/\/wallpaper\.soutushenqi\.com\/api\/.+\/account\/token script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/soutu.js, requires-body=true, tag=搜图神器
+
+#************************************#
+# Spotify (不能超高音质)
+#2023.10.04部分解锁premium,音质不能设置为超高(建议登录后再打开脚本,重启app等待脚本生效)https://github.com/app2smile/rules
+# 功能: 1.去除播放广告 2.歌手/专辑列表正常展示 3.去除随机播放
+#http-request ^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/ script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js, timeout=10, tag=spotifyJson, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
+#http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, requires-body=true, binary-body-mode=true, timeout=10, tag=spotifyProto, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
+
+#************************************#
+# 夸克
+# hostname = drive*.quark.cn
+http-response ^https?:\/\/drive.*\.quark\.cn\/.+\/clouddrive\/(member.+|distribute\/detail.+|capacity\/growth\/info) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/kuake.js, requires-body=true, tag=夸克
+
+#************************************#
+# WPS Office
+# hostname = *.wps.cn
+http-response ^https?:\/\/(vas|account|drive)\.wps\.cn\/(query\/api\/.+\/list_purchase_info|api\/(v\d\/spaces|users\/.+\/overview)) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/WPS.js, requires-body=true, tag=WPS
+
+
+#************************************#
+# 泼辣修图
+# hostname = api.polaxiong.com
+http-response ^https?:\/\/api\.polaxiong\.com\/.+\/payments\/(profiles\/.+\/subscription|appleiap\/receipts\/confirmation) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/pola.js, requires-body=true, tag=泼辣修图
+
+
+#************************************#
+# Slidebox相册清理
+# hostname = *-slidebox-ios-prod.cloudfunctions.net
+http-response ^https?:\/\/.*-slidebox-ios-prod\.cloudfunctions\.net\/api.+ script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/slidebox.js, requires-body=true, tag=Slidebox-相册清理
+
+#************************************#
+# 迅雷解锁
+# hostname = xluser-ssl.xunlei.com
+http-response https://xluser-ssl.xunlei.com/xluser.core.login/v3/getuserinfo script-path=https://raw.githubusercontent.com/Marol62926/MarScrpt/main/xunlei.js, requires-body=true, timeout=10, tag=迅雷解锁
+
+
+#************************************#
+# 
+# 
+
+
+#************************************#
+# Documents
+# hostname = license.pdfexpert.com
+http-request ^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/documents\/subscription\/refresh requires-body=1,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/documents.js
+
+
+
+#************************************#
+#************************************#
+[MITM]
+hostname = wallpaper.soutushenqi.com, drive*.quark.cn, *.wps.cn, api.polaxiong.com, *-slidebox-ios-prod.cloudfunctions.net, app.bilibili.com, xluser-ssl.xunlei.com,license.pdfexpert.com
