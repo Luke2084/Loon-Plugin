@@ -4,7 +4,7 @@
 # 偷自kelee高德去广告。不想屏蔽我的页面，而插件未提供选项开关，loon也不支持禁用单个脚本，无奈😮‍💨
 #!author = @Luke2084[https://github.com/Luke2084]
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Amap.png
-#!date = 2025-10-20 12:26
+#!date = 2025-10-20 12:29
 #!system = iOS,iPadOS
 #!tag = 去广告
 #!loon_version = 3.2.1(372)
@@ -18,7 +18,7 @@ DOMAIN-SUFFIX,v.smtcdns.com,REJECT
 
 [Rewrite]
 # 此条可以屏蔽首次进入的天气动效图层 但是会导致足迹不显示地图数据
-#^https:\/\/mps\.amap\.com\/ws\/mps\/scene\? reject-dict
+# ^https:\/\/mps\.amap\.com\/ws\/mps\/scene\? reject-dict
 
 # 导航详情页 - 路线规划、地点详情页、搜索详情页、导航结束页
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword\? reject-dict
@@ -33,7 +33,7 @@ DOMAIN-SUFFIX,v.smtcdns.com,REJECT
 ^https:\/\/m5\.amap\.com\/ws\/aos\/main\/page\/product\/list\? reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/(?:main-page-assets|main-page-location|ridewalk-end-fc|usr-profile-fc\/homeV2) reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/(?:mapapi\/hint_text\/offline_data|message\/notice\/list|shield\/search\/new_hotword) reject-dict
-^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend\? reject-dict
+# ^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend\? reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/valueadded\/weather\/v2\? reject-dict
 ^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull_mp\? reject-dict
 
