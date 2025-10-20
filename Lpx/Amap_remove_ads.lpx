@@ -4,7 +4,7 @@
 # 偷自kelee高德去广告。不想屏蔽我的页面，而插件未提供选项开关，loon也不支持禁用单个脚本，无奈😮‍💨
 #!author = @Luke2084[https://github.com/Luke2084]
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Amap.png
-#!date = 2025-10-20 12:38
+#!date = 2025-10-20 12:50
 #!system = iOS,iPadOS
 #!tag = 去广告
 #!loon_version = 3.2.1(372)
@@ -59,7 +59,7 @@ http-response ^https:\/\/(?:info|m5)\.amap\.com\/ws\/shield\/search\/(?:common\/
 http-response ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/(?:card-service-plan-home|main-page) script-path=https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js, requires-body=true, timeout=20, tag=移除首页推广
 # http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/frogserver\/aocs\/updatable\/1\? script-path=https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js, requires-body=true, timeout=20, tag=移除首页推广
 # 我的页面 - 个人主页、推广卡片
-http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\? script-path=https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js, requires-body=true, timeout=20, tag=移除我的页面推广
+# http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\? script-path=https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js, requires-body=true, timeout=20, tag=移除我的页面推广
 
 # 附近页
 http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/nearbyrec_smart\? script-path=https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js, requires-body=true, timeout=20, tag=移除附近页推广
