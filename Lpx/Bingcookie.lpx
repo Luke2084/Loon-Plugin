@@ -4,7 +4,7 @@
 #!date = 2025-10-20 11:25
 [Script]
 # Bing积分
-http-response ^https:\/\/rewards\.bing\.com\? script-path=https://raw.githubusercontent.com/hutao571/Other-Script/main/BingRewards.js, requires-body=true, timeout=20, tag=Bing积分cookie
+http-response ^https:\/\/rewards\.bing\.com\? script-path=https://raw.githubusercontent.com/Luke2084/Loon-Plugin/refs/heads/main/JavaScript/BingRewards.js, requires-body=true, timeout=20, tag=Bing积分cookie
 
 [MITM]
 hostname = rewards.bing.com
