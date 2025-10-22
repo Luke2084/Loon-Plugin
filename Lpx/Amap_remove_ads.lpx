@@ -1,6 +1,6 @@
 #!name = 高德地图去广告
 #!desc = 过滤高德地图开屏广告、各页面推广，精简我的页面。
-#!homepage= https://apps.apple.com/app/id461703208
+#!openUrl =  https://apps.apple.com/app/id461703208
 # 偷自kelee高德去广告。不想屏蔽我的页面，而插件未提供选项开关，loon也不支持禁用单个脚本，无奈😮‍💨
 #!author = @Luke2084[https://github.com/Luke2084]
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Amap.png
