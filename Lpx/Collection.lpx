@@ -2,7 +2,7 @@
 #!desc = 自用脚本整合
 #!author = Luke2084
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PostBox_1.png
-#!date = 2025-10-28
+#!date = 2025-12-04
 [Rule]
 
 [Rewrite]
@@ -31,7 +31,7 @@ http-response ^http:\/\/wallpaper\.soutushenqi\.com\/api\/.+\/account\/token scr
 #************************************#
 # 夸克
 # hostname = drive*.quark.cn
-http-response ^https?:\/\/drive.*\.quark\.cn\/.+\/clouddrive\/(member.+|distribute\/detail.+|capacity\/growth\/info) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/kuake.js, requires-body=true, tag=夸克
+# http-response ^https?:\/\/drive.*\.quark\.cn\/.+\/clouddrive\/(member.+|distribute\/detail.+|capacity\/growth\/info) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/kuake.js, requires-body=true, tag=夸克
 
 #************************************#
 # WPS Office
@@ -71,4 +71,4 @@ http-request ^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/documents\/subscript
 #************************************#
 #************************************#
 [MITM]
-hostname = wallpaper.soutushenqi.com, drive*.quark.cn, *.wps.cn, api.polaxiong.com, *-slidebox-ios-prod.cloudfunctions.net, app.bilibili.com, xluser-ssl.xunlei.com,license.pdfexpert.com
+hostname = wallpaper.soutushenqi.com, *.wps.cn, api.polaxiong.com, *-slidebox-ios-prod.cloudfunctions.net, app.bilibili.com, xluser-ssl.xunlei.com,license.pdfexpert.com
